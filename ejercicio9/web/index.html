@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="ejercicio9.css">
+        <link href="font/css/font-awesome.min.css" rel="stylesheet"/>
+    </head>
+    <script>
+        function abrir(nodo){
+            nodoUL = nodo.getElementsByTagName("ul")[0];
+            //nodoUL.className="vertical-menu vertical-menu--0";
+            nodoUL= removeClass(nodoUL,"vertical-menu--close");
+            nodo=removeClass(nodo,"vertical-menu__item--close")
+            nodo=addClass(nodo,"vertical-menu__item--open");
+            //alert(nodo.className);
+            //alert("Hola");
+        }
+        function removeClass(nodo1,clase){
+            claseNodo=nodo1.className;
+            //alert(claseNodo);
+            var posClase=claseNodo.indexOf(clase);
+            //alert(posClase);
+            claseNodoNueva=claseNodo.slice(0,posClase)+claseNodo.slice(posClase+clase.length+1);
+            //alert(claseNodoNueva);
+            nodo1.className=claseNodoNueva;
+            
+            return nodo1;            
+        }
+        function addClass(nodo1, clase){
+            claseNodo=nodo1.className;
+            claseNodoNueva=claseNodo+" "+clase;
+            //alert(claseNodoNueva);
+            nodo1.className=claseNodoNueva;
+            
+            return nodo1;  
+        }
+    </script>
+    <body>
+        <ul class="vertical-menu">
+            <li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close" onclick=abrir(this)>
+                <a onclick=abrir(this) class="vertical-menu__link">Item 1</a>
+                <ul class="vertical-menu vertical-menu--0  vertical-menu--close">
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--close">
+                        Sub-item 1
+                        <ul>
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 1</li>
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 2</li>
+                        </ul>
+                    </li>
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--close">
+                        Sub-item 2
+                        <ul>
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 3</li>
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 4</li>
+                        </ul>
+                    </li>
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 1</li>
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 2</li>
+                </ul>
+            </li>
+            <li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close"> Item2</li>
+            <li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close"> Item3</li>
+            <li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close"> Item4</li>
+        </ul>
+    </body>
+</html>

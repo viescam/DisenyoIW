@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+li,a{
+    border:1px solid white;
+}
 .vertical-menu{
     padding: 0;
     margin:0;
@@ -8,8 +11,12 @@
 .vertical-menu__item{
     list-style:none;
     color:white;
-    /*padding: 10px 0px;*/        
-}
+    padding: 10px 0px;
+ }
+ .vertical-menu__item--menu{
+   padding: 0;
+   margin:0;
+ }
 .vertical-menu--close{
     display:none;
 }
@@ -17,15 +24,28 @@
     background-color: #4D5158;
 }
 .vertical-menu__item--1{
-    background-color: #3F4248;
+    background-color: #35383D;
+    margin:0;
+    padding: 10px 0 10px 10px;
+ }
+.vertical-menu__item--2{
+    background-color: #35383D;
     margin:0;
 }
 .vertical-menu__link{
+    color:white;
     display:block;
-    background-color: red;
     padding:10px 0px;
+    
 }
-.vertical-menu__link:before{
+.vertical-menu__link--0{
+    background-color: #4D5158;
+}
+.vertical-menu__link--1{
+    background-color: #35383D;
+    /*padding: 10px 0 10px 10px;*/
+}
+/*.vertical-menu__link:before{
     font-family: FontAwesome;
     content:"\f115";
     padding: 10px;
@@ -35,8 +55,9 @@
     content:"\f0d8";
     float:right;
     padding: 0 10px; 
-}
-/*.vertical-menu__item--open:before{
+}*/
+/*
+.vertical-menu__item--open:before{
     font-family: FontAwesome;
     content:"\f115";
     padding: 10px;   
@@ -45,12 +66,12 @@
     font-family: FontAwesome;
     content:"\f0d8";
     float:right;
-    padding: 10px; 
+    padding: 0 10px; 
 }
 .vertical-menu__item--close:before{
     font-family: FontAwesome;
     content:"\f114";
-    padding: 0 10px;   
+    padding: 10px;   
 }
 .vertical-menu__item--close:after{
     font-family: FontAwesome;
@@ -58,11 +79,35 @@
     float:right;
     padding: 0 10px;
 }
+*/
+.vertical-menu__link--open:before{
+    font-family: FontAwesome;
+    content:"\f115";
+    padding: 10px;   
+}
+.vertical-menu__link--open:after{
+    font-family: FontAwesome;
+    content:"\f0d8";
+    float:right;
+    padding: 0 10px; 
+}
+.vertical-menu__link--close:before{
+    font-family: FontAwesome;
+    content:"\f114";
+    padding: 10px;   
+}
+.vertical-menu__link--close:after{
+    font-family: FontAwesome;
+    content:"\f0d7";
+    float:right;
+    padding: 0 10px;
+}
+
 .vertical-menu__item--document:before{
     font-family: FontAwesome;
     content:"\f016";
     padding: 10px;   
-}*/
+}
 /*a{
     background-color: red;
     display:block;

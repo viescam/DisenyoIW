@@ -13,12 +13,19 @@ and open the template in the editor.
         <link href="font/css/font-awesome.min.css" rel="stylesheet"/>
     </head>
     <script>
-        function abrir(nodo){
-            nodoUL = nodo.getElementsByTagName("ul")[0];
+        function abrirCerrar(nodo){
+            nodoIL = nodo.parentNode;
+            nodoUL = nodoIL.getElementsByTagName("ul")[0];
             //nodoUL.className="vertical-menu vertical-menu--0";
-            nodoUL= removeClass(nodoUL,"vertical-menu--close");
-            nodo=removeClass(nodo,"vertical-menu__item--close")
-            nodo=addClass(nodo,"vertical-menu__item--open");
+            if(nodo.className.indexOf("vertical-menu__link--close")===-1){
+                nodoUL= addClass(nodoUL,"vertical-menu--close");
+                nodo=addClass(nodo,"vertical-menu__link--close")
+                nodo=removeClass(nodo,"vertical-menu__link--open");
+            }else{
+                nodoUL= removeClass(nodoUL,"vertical-menu--close");
+                nodo=removeClass(nodo,"vertical-menu__link--close")
+                nodo=addClass(nodo,"vertical-menu__link--open");
+            }
             //alert(nodo.className);
             //alert("Hola");
         }
@@ -44,19 +51,22 @@ and open the template in the editor.
     </script>
     <body>
         <ul class="vertical-menu">
-            <li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close" onclick=abrir(this)>
-                <a onclick=abrir(this) class="vertical-menu__link">Item 1</a>
+            <!--<li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close" onclick=abrir(this)>-->
+            <li>
+                <a onclick=abrirCerrar(this) class="vertical-menu__link vertical-menu__item--0 vertical-menu__link--close">Item 1</a>
                 <ul class="vertical-menu vertical-menu--0  vertical-menu--close">
-                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--close">
-                        Sub-item 1
-                        <ul>
+                    <!--<li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--close">-->
+                    <li class="vertical-menu__item--1">
+                        <a onclick=abrirCerrar(this) class="vertical-menu__link vertical-menu__link--1 vertical-menu__link--close">Sub-item 1</a>
+                        <ul class="vertical-menu--close">
                             <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 1</li>
                             <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 2</li>
                         </ul>
                     </li>
-                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--close">
-                        Sub-item 2
-                        <ul>
+                    <!--<li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--close">-->
+                    <li class="vertical-menu__item--1">
+                        <a onclick=abrirCerrar(this) class="vertical-menu__link vertical-menu__link--1 vertical-menu__link--close">Sub-item 2</a>
+                        <ul class="vertical-menu--close">
                             <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 3</li>
                             <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 4</li>
                         </ul>
@@ -65,9 +75,6 @@ and open the template in the editor.
                     <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 2</li>
                 </ul>
             </li>
-            <li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close"> Item2</li>
-            <li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close"> Item3</li>
-            <li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close"> Item4</li>
         </ul>
     </body>
 </html>

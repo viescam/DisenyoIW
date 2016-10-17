@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Ejercicio 9</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" type="text/css" href="ejercicio9.css">
         <link href="font/css/font-awesome.min.css" rel="stylesheet"/>
+        <!--[if lt IE 9]>
+            <script src="html5shiv.js"></script>
+            <script src="respond.js"></script>
+        <![endif]-->
     </head>
     <script>
         function abrirCerrar(nodo){
             nodoIL = nodo.parentNode;
             nodoUL = nodoIL.getElementsByTagName("ul")[0];
             //nodoUL.className="vertical-menu vertical-menu--0";
-            if(nodo.className.indexOf("vertical-menu__link--close")===-1){
+            if(nodo.className.indexOf("vertical-menu__item--folder--close")===-1){
                 nodoUL= addClass(nodoUL,"vertical-menu--close");
-                nodo=addClass(nodo,"vertical-menu__link--close")
-                nodo=removeClass(nodo,"vertical-menu__link--open");
+                nodo=addClass(nodo,"vertical-menu__item--folder--close")
+                nodo=removeClass(nodo,"vertical-menu__item--folder--open");
             }else{
                 nodoUL= removeClass(nodoUL,"vertical-menu--close");
-                nodo=removeClass(nodo,"vertical-menu__link--close")
-                nodo=addClass(nodo,"vertical-menu__link--open");
+                nodo=removeClass(nodo,"vertical-menu__item--folder--close")
+                nodo=addClass(nodo,"vertical-menu__item--folder--open");
             }
             //alert(nodo.className);
             //alert("Hola");
@@ -50,29 +50,67 @@ and open the template in the editor.
         }
     </script>
     <body>
-        <ul class="vertical-menu">
-            <!--<li class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--close" onclick=abrir(this)>-->
+        <ul class="listaExterna">
             <li>
-                <a onclick=abrirCerrar(this) class="vertical-menu__link vertical-menu__item--0 vertical-menu__link--close">Item 1</a>
-                <ul class="vertical-menu vertical-menu--0  vertical-menu--close">
-                    <!--<li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--close">-->
-                    <li class="vertical-menu__item--1">
-                        <a onclick=abrirCerrar(this) class="vertical-menu__link vertical-menu__link--1 vertical-menu__link--close">Sub-item 1</a>
-                        <ul class="vertical-menu--close">
+                <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--folder--close">Item 1</a>
+                <ul class="listaInterna1 vertical-menu--close">
+                    <li>
+                        <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 1</a>
+                        <ul class="listaInterna1 vertical-menu--close">
                             <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 1</li>
                             <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 2</li>
                         </ul>
                     </li>
-                    <!--<li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--close">-->
-                    <li class="vertical-menu__item--1">
-                        <a onclick=abrirCerrar(this) class="vertical-menu__link vertical-menu__link--1 vertical-menu__link--close">Sub-item 2</a>
-                        <ul class="vertical-menu--close">
+                    <li>
+                        <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 2</a>
+                        <ul class="listaInterna1 vertical-menu--close">
                             <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 3</li>
                             <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 4</li>
                         </ul>
                     </li>
                     <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 1</li>
                     <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 2</li>
+                </ul>
+            </li>
+            <li>
+                <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--folder--close">Item 2</a>
+                <ul class="listaInterna1 vertical-menu--close">
+                    <li>
+                        <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 3</a>
+                        <ul class="listaInterna1 vertical-menu--close">
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 3</li>
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 4</li>
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 5</li>
+                        </ul>
+                    </li>
+                    <li class="vertical-menu__item vertical-menu__item--document vertical-menu__item--1"> Thing 3</li>
+                </ul>
+            </li>
+            <li>
+                <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--folder--close">Item 3</a>
+                <ul class="listaInterna1 vertical-menu--close">
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 4</li>
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 5</li>
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 6</li>
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 7</li>
+                    <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 8</li>
+                </ul>
+            </li>
+            <li>
+                <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--folder--close">Item 4</a>
+                <ul class="listaInterna1 vertical-menu--close">
+                    <li>
+                        <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 4</a>
+                        <ul class="listaInterna1 vertical-menu--close">
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 6</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 5</a>
+                        <ul class="listaInterna1 vertical-menu--close">
+                            <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 7</li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>

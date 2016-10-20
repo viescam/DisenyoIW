@@ -1,10 +1,16 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 18-oct-2016, 14:09:16
-    Author     : alumno
-*/
-
+.message{
+    background-color: #dddddd;
+    color: #5d5a5a;
+    padding:10px 15px;
+    margin:20px 0;
+    border:1px solid #b3acac;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #dddddd;
+}
+@each $format, $color in $format_variations{
+    .message--#{$format}{
+        background-color: lighten($color,30%);
+        border: 1px solid lighten($color,15%);
+        box-shadow: 2px 2px 5px lighten($color,30%);
+    }
+}

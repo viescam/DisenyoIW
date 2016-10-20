@@ -1,0 +1,26 @@
+.boton {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  margin: 10px 10px; }
+
+.boton--primary {
+  background-color: #9fc4e4;
+  border: 1px solid #337ab7; }
+
+.boton--success {
+  background-color: #c7e6c7;
+  border: 1px solid #5cb85c; }
+
+.boton--info {
+  background-color: #daf1f8;
+  border: 1px solid #5bc0de; }
+
+.boton--warning {
+  background-color: #fceedb;
+  border: 1px solid #f0ad4e; }
+
+.boton--error {
+  background-color: #f4cecd;
+  border: 1px solid #d9534f; }

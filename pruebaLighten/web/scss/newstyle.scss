@@ -1,0 +1,16 @@
+$format_variations:(primary,#337ab7),(success,#5cb85c),(info,#5bc0de),(warning,#f0ad4e),(error,#d9534f);
+$color:#337ab7;
+.boton{
+    color:black;
+    text-decoration: none;
+    padding:10px;
+    display:block;
+    margin:10px 10px;
+}
+@each $format, $color in $format_variations{
+    .boton--#{$format}{
+        background-color: lighten($color,30%);
+        border: 1px solid $color;
+        //box-shadow: 2px 2px 5px $color;
+    }
+}

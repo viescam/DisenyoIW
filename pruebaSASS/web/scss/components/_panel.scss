@@ -1,10 +1,44 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 18-oct-2016, 14:09:33
-    Author     : alumno
-*/
+.panel{
+    box-shadow: 5px 5px 10px #dddddd;
+    border-radius: 5px;
+    margin:20px 0;
+}
+@each $format, $color in $format_variations{
+    .panel--#{$format}{
+        box-shadow: 5px 5px 10px desaturate(lighten($color,30%),15%);
+   }
+}
+.panel__header{
+    background-color: #dddddd;
+    color: #5d5a5a;
+    padding:10px 15px;
+    border:1px solid #b3acac;
+    border-radius: 5px 5px 0 0;
+}
+@each $format, $color in $format_variations{
+    .panel__header--#{$format}{
+        background-color: desaturate(lighten($color,30%),15%);
+        color: #ffffff;
+        border:1px solid lighten($color,20%); 
+   }
+}
+.panel__body{
+    padding:15px 15px;
+    margin:0;
+    background-color: #ffffff;
+    color: #000000;
+    border-right:1px solid #b3acac;
+    border-left:1px solid #b3acac;
+    border-bottom:1px solid #b3acac;
+    border-radius: 0 0 5px 5px;
+}
+@each $format, $color in $format_variations{
+    .panel__body--#{$format}{
+        border-right:1px solid lighten($color,20%);
+        border-left:1px solid lighten($color,20%);
+        border-bottom:1px solid lighten($color,20%);
+    }
+}
+
+
 

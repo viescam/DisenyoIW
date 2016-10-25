@@ -1,37 +1,207 @@
 @import url(base/_reset.css);
 .boton {
+  background-color: #b3acac;
+  border: 1px solid #9b9191;
+  box-shadow: 2px 2px 5px #b3acac;
+  /*
+    &:active{}
+    &:hover{}
+    */
   font-size: 16px;
   padding: 10px 10px;
-  background-color: #b3acac;
   color: #ffffff;
   margin: 20px 0;
-  border: 1px solid #9b9191;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px #b3acac;
   display: inline-block;
   text-decoration: none; }
 
 .boton--primary {
   background-color: #337ab7;
   border: 1px solid #285f8f;
-  box-shadow: 2px 2px 5px #337ab7; }
+  box-shadow: 2px 2px 5px #337ab7;
+  /*
+    &:active{}
+    &:hover{}
+    */ }
 
 .boton--success {
   background-color: #5cb85c;
   border: 1px solid #449d44;
-  box-shadow: 2px 2px 5px #5cb85c; }
+  box-shadow: 2px 2px 5px #5cb85c;
+  /*
+    &:active{}
+    &:hover{}
+    */ }
 
 .boton--info {
   background-color: #5bc0de;
   border: 1px solid #31b0d5;
-  box-shadow: 2px 2px 5px #5bc0de; }
+  box-shadow: 2px 2px 5px #5bc0de;
+  /*
+    &:active{}
+    &:hover{}
+    */ }
 
 .boton--warning {
   background-color: #f0ad4e;
   border: 1px solid #ec971f;
-  box-shadow: 2px 2px 5px #f0ad4e; }
+  box-shadow: 2px 2px 5px #f0ad4e;
+  /*
+    &:active{}
+    &:hover{}
+    */ }
 
 .boton--error {
   background-color: #d9534f;
   border: 1px solid #c9302c;
-  box-shadow: 2px 2px 5px #d9534f; }
+  box-shadow: 2px 2px 5px #d9534f;
+  /*
+    &:active{}
+    &:hover{}
+    */ }
+
+.boton--xs {
+  font-size: 12px;
+  padding: 6px;
+  border-radius: 5px; }
+
+.boton--s {
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 6px; }
+
+.boton--m {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 7px; }
+
+.boton--l {
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px; }
+
+.boton--xl {
+  font-size: 20px;
+  padding: 14px;
+  border-radius: 9px; }
+
+.message {
+  background-color: #dddddd;
+  color: #5d5a5a;
+  padding: 10px 15px;
+  margin: 20px 0;
+  border: 1px solid #b3acac;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #dddddd; }
+
+.message--primary {
+  background-color: #a8c3db;
+  border: 1px solid #77acd9;
+  box-shadow: 2px 2px 5px #a8c3db; }
+
+.message--success {
+  background-color: #cde0cd;
+  border: 1px solid #a3d7a3;
+  box-shadow: 2px 2px 5px #cde0cd; }
+
+.message--info {
+  background-color: #deeff4;
+  border: 1px solid #b0e1ef;
+  box-shadow: 2px 2px 5px #deeff4; }
+
+.message--warning {
+  background-color: #f9eede;
+  border: 1px solid #f8d9ac;
+  box-shadow: 2px 2px 5px #f9eede; }
+
+.message--error {
+  background-color: #f0d2d1;
+  border: 1px solid #eba5a3;
+  box-shadow: 2px 2px 5px #f0d2d1; }
+
+.panel {
+  box-shadow: 5px 5px 10px #dddddd;
+  border-radius: 5px;
+  margin: 20px 0; }
+
+.panel--primary {
+  box-shadow: 5px 5px 10px #a8c3db; }
+
+.panel--success {
+  box-shadow: 5px 5px 10px #cde0cd; }
+
+.panel--info {
+  box-shadow: 5px 5px 10px #deeff4; }
+
+.panel--warning {
+  box-shadow: 5px 5px 10px #f9eede; }
+
+.panel--error {
+  box-shadow: 5px 5px 10px #f0d2d1; }
+
+.panel__header {
+  background-color: #dddddd;
+  color: #5d5a5a;
+  padding: 10px 15px;
+  border: 1px solid #b3acac;
+  border-radius: 5px 5px 0 0; }
+
+.panel__header--primary {
+  background-color: #a8c3db;
+  color: #ffffff;
+  border: 1px solid #77acd9; }
+
+.panel__header--success {
+  background-color: #cde0cd;
+  color: #ffffff;
+  border: 1px solid #a3d7a3; }
+
+.panel__header--info {
+  background-color: #deeff4;
+  color: #ffffff;
+  border: 1px solid #b0e1ef; }
+
+.panel__header--warning {
+  background-color: #f9eede;
+  color: #ffffff;
+  border: 1px solid #f8d9ac; }
+
+.panel__header--error {
+  background-color: #f0d2d1;
+  color: #ffffff;
+  border: 1px solid #eba5a3; }
+
+.panel__body {
+  padding: 15px 15px;
+  margin: 0;
+  background-color: #ffffff;
+  color: #000000;
+  border-right: 1px solid #b3acac;
+  border-left: 1px solid #b3acac;
+  border-bottom: 1px solid #b3acac;
+  border-radius: 0 0 5px 5px; }
+
+.panel__body--primary {
+  border-right: 1px solid #77acd9;
+  border-left: 1px solid #77acd9;
+  border-bottom: 1px solid #77acd9; }
+
+.panel__body--success {
+  border-right: 1px solid #a3d7a3;
+  border-left: 1px solid #a3d7a3;
+  border-bottom: 1px solid #a3d7a3; }
+
+.panel__body--info {
+  border-right: 1px solid #b0e1ef;
+  border-left: 1px solid #b0e1ef;
+  border-bottom: 1px solid #b0e1ef; }
+
+.panel__body--warning {
+  border-right: 1px solid #f8d9ac;
+  border-left: 1px solid #f8d9ac;
+  border-bottom: 1px solid #f8d9ac; }
+
+.panel__body--error {
+  border-right: 1px solid #eba5a3;
+  border-left: 1px solid #eba5a3;
+  border-bottom: 1px solid #eba5a3; }

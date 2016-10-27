@@ -3,8 +3,8 @@
     border-radius: 5px;
     margin:20px 0;
 }
-@each $format, $color in $format_variations{
-    .panel--#{$format}{
+@each $functionality-name, $color in $functionalities{
+    .panel--#{$functionality-name}{
         box-shadow: 5px 5px 10px desaturate(lighten($color,30%),15%);
    }
 }
@@ -15,8 +15,8 @@
     border:1px solid #b3acac;
     border-radius: 5px 5px 0 0;
 }
-@each $format, $color in $format_variations{
-    .panel__header--#{$format}{
+@each $functionality-name, $color in $functionalities{
+    .panel__header--#{$functionality-name}{
         background-color: desaturate(lighten($color,30%),15%);
         color: #ffffff;
         border:1px solid lighten($color,20%); 
@@ -32,8 +32,8 @@
     border-bottom:1px solid #b3acac;
     border-radius: 0 0 5px 5px;
 }
-@each $format, $color in $format_variations{
-    .panel__body--#{$format}{
+@each $functionality-name, $color in $functionalities{
+    .panel__body--#{$functionality-name}{
         border-right:1px solid lighten($color,20%);
         border-left:1px solid lighten($color,20%);
         border-bottom:1px solid lighten($color,20%);

@@ -4,8 +4,8 @@
   border: 1px solid #9b9191;
   box-shadow: 2px 2px 5px #b3acac;
   /*
-    &:active{}
-    &:hover{}
+    &:active{box-shadow: inset 0px 5px 15px 3px darken($color,20%);}
+    &:hover{background-color: darken($color,10%)}
     */
   font-size: 16px;
   padding: 10px 10px;
@@ -20,8 +20,8 @@
   border: 1px solid #285f8f;
   box-shadow: 2px 2px 5px #337ab7;
   /*
-    &:active{}
-    &:hover{}
+    &:active{box-shadow: inset 0px 5px 15px 3px darken($color,20%);}
+    &:hover{background-color: darken($color,10%)}
     */ }
 
 .boton--success {
@@ -29,8 +29,8 @@
   border: 1px solid #449d44;
   box-shadow: 2px 2px 5px #5cb85c;
   /*
-    &:active{}
-    &:hover{}
+    &:active{box-shadow: inset 0px 5px 15px 3px darken($color,20%);}
+    &:hover{background-color: darken($color,10%)}
     */ }
 
 .boton--info {
@@ -38,8 +38,8 @@
   border: 1px solid #31b0d5;
   box-shadow: 2px 2px 5px #5bc0de;
   /*
-    &:active{}
-    &:hover{}
+    &:active{box-shadow: inset 0px 5px 15px 3px darken($color,20%);}
+    &:hover{background-color: darken($color,10%)}
     */ }
 
 .boton--warning {
@@ -47,8 +47,8 @@
   border: 1px solid #ec971f;
   box-shadow: 2px 2px 5px #f0ad4e;
   /*
-    &:active{}
-    &:hover{}
+    &:active{box-shadow: inset 0px 5px 15px 3px darken($color,20%);}
+    &:hover{background-color: darken($color,10%)}
     */ }
 
 .boton--error {
@@ -56,8 +56,8 @@
   border: 1px solid #c9302c;
   box-shadow: 2px 2px 5px #d9534f;
   /*
-    &:active{}
-    &:hover{}
+    &:active{box-shadow: inset 0px 5px 15px 3px darken($color,20%);}
+    &:hover{background-color: darken($color,10%)}
     */ }
 
 .boton--xs {

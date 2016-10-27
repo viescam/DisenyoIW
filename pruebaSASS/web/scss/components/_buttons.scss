@@ -3,8 +3,8 @@
     border: 1px solid darken($color, 10%);
     box-shadow: 2px 2px 5px $color;
     /*
-    &:active{}
-    &:hover{}
+    &:active{box-shadow: inset 0px 5px 15px 3px darken($color,20%);}
+    &:hover{background-color: darken($color,10%)}
     */
     
 }
@@ -19,8 +19,8 @@
     text-decoration: none;
 }
 
-@each $format, $color in $format_variations{
-    .boton--#{$format}{
+@each $functionality-name, $color in $functionalities{
+    .boton--#{$functionality-name}{
         @include boton-generic-format($color);
     }
 }

@@ -7,8 +7,8 @@
     border-radius: 5px;
     box-shadow: 2px 2px 5px #dddddd;
 }
-@each $format, $color in $format_variations{
-    .message--#{$format}{
+@each $functionality-name, $color in $functionalities{
+    .message--#{$functionality-name}{
         background-color: desaturate(lighten($color,30%),15%);
         border: 1px solid lighten($color,20%);
         box-shadow: 2px 2px 5px desaturate(lighten($color,30%),15%);

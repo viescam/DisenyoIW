@@ -3,7 +3,10 @@ $num_columns:12;
     .col-#{$i}{
         width: ((100/$num_columns)*$i)*1%;
         float:left;
-        height: 200px;
+    }
+    
+    .offset-#{$i}{
+        margin-left:((100/$num_columns)*$i)*1%;
     }
 }
 .border{
@@ -11,4 +14,13 @@ $num_columns:12;
 }
 .border-blue{
     border: 1px solid blue;
+}
+/*.row{
+    clear:both;
+    display: block;
+}*/
+.row:after{
+    content:"";
+    clear:both;
+    display: block;
 }

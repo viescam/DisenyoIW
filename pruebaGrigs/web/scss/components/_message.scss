@@ -1,0 +1,16 @@
+.message{
+    background-color: #dddddd;
+    color: #5d5a5a;
+    padding:10px 15px;
+    margin:20px 0;
+    border:1px solid #b3acac;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #dddddd;
+}
+@each $functionality-name, $color in $functionalities{
+    .message--#{$functionality-name}{
+        background-color: desaturate(lighten($color,30%),15%);
+        border: 1px solid lighten($color,20%);
+        box-shadow: 2px 2px 5px desaturate(lighten($color,30%),15%);
+    }
+}

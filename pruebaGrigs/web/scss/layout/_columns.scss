@@ -1,0 +1,14 @@
+$num_columns:12;
+@for $i from 1 through $num_columns{
+    .col-#{$i}{
+        width: ((100/$num_columns)*$i)*1%;
+        float:left;
+        height: 200px;
+    }
+}
+.border{
+    border: 1px solid red;
+}
+.border-blue{
+    border: 1px solid blue;
+}

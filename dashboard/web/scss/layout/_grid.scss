@@ -1,0 +1,26 @@
+$num_columns:12;
+@for $i from 1 through $num_columns{
+    .col-#{$i}{
+        width: ((100/$num_columns)*$i)*1%;
+        float:left;
+    }
+    
+    .offset-#{$i}{
+        margin-left:((100/$num_columns)*$i)*1%;
+    }
+}
+.border{
+    border: 1px solid red;
+}
+.border-blue{
+    border: 1px solid blue;
+}
+/*.row{
+    clear:both;
+    display: block;
+}*/
+.row:after{
+    content:"";
+    clear:both;
+    display: block;
+}

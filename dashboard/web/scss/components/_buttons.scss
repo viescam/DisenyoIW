@@ -1,0 +1,35 @@
+@mixin boton-generic-format($color) {
+    background-color: $color;
+    border: 1px solid darken($color, 10%);
+    box-shadow: 2px 2px 5px $color;
+    /*
+    &:active{box-shadow: inset 0px 5px 15px 3px darken($color,20%);}
+    &:hover{background-color: darken($color,10%)}
+    */
+    
+}
+.boton{
+    @include boton-generic-format($GreyColor);
+    font-size:16px;
+    padding:10px 10px;
+    color: #ffffff;
+    margin:20px 0;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+@each $functionality-name, $color in $functionalities{
+    .boton--#{$functionality-name}{
+        @include boton-generic-format($color);
+    }
+}
+
+@for $i from 1 through length($tamanyos){
+    .boton--#{nth($tamanyos,$i)}{
+        font-size:10px+$i*2px;
+        padding:4px+$i*2px;
+        border-radius:4px+$i*1px;
+    }
+}
+

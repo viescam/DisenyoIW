@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link href="font/css/font-awesome.min.css" rel="stylesheet"/>
+        <!--[if lt IE 9]>
+            <script src="html5shiv.js"></script>
+            <script src="respond.js"></script>
+        <![endif]-->
+        </head>
+        <script>
+            function abrirCerrar(nodo){
+                nodoIL = nodo.parentNode;
+                nodoUL = nodoIL.getElementsByTagName("ul")[0];
+                //nodoUL.className="vertical-menu vertical-menu--0";
+                if(nodo.className.indexOf("vertical-menu__item--folder--close")===-1){
+                    nodoUL= addClass(nodoUL,"vertical-menu--close");
+                    nodo=addClass(nodo,"vertical-menu__item--folder--close")
+                    nodo=removeClass(nodo,"vertical-menu__item--folder--open");
+                }else{
+                    nodoUL= removeClass(nodoUL,"vertical-menu--close");
+                    nodo=removeClass(nodo,"vertical-menu__item--folder--close")
+                    nodo=addClass(nodo,"vertical-menu__item--folder--open");
+                }
+                //alert(nodo.className);
+                //alert("Hola");
+            }
+            function removeClass(nodo1,clase){
+                claseNodo=nodo1.className;
+                //alert(claseNodo);
+                var posClase=claseNodo.indexOf(clase);
+                //alert(posClase);
+                claseNodoNueva=claseNodo.slice(0,posClase)+claseNodo.slice(posClase+clase.length+1);
+                //alert(claseNodoNueva);
+                nodo1.className=claseNodoNueva;
+
+                return nodo1;            
+            }
+            function addClass(nodo1, clase){
+                claseNodo=nodo1.className;
+                claseNodoNueva=claseNodo+" "+clase;
+                //alert(claseNodoNueva);
+                nodo1.className=claseNodoNueva;
+
+                return nodo1;  
+            }
+        </script>
+    <body>
+        <aside class="col-2">
+            <ul>
+                <li>
+                    <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--folder--close">Item 1</a>
+                    <ul class="vertical-menu--close">
+                        <li>
+                            <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 1</a>
+                            <ul class="vertical-menu--close">
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 1</li>
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 2</a>
+                            <ul class="vertical-menu--close">
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 3</li>
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 4</li>
+                            </ul>
+                        </li>
+                        <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 1</li>
+                        <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 2</li>
+                    </ul>
+                </li>
+                <li>
+                    <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--folder--close">Item 2</a>
+                    <ul class="vertical-menu--close">
+                        <li>
+                            <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 3</a>
+                            <ul class="vertical-menu--close">
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 3</li>
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 4</li>
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 5</li>
+                            </ul>
+                        </li>
+                        <li class="vertical-menu__item vertical-menu__item--document vertical-menu__item--1"> Thing 3</li>
+                    </ul>
+                </li>
+                <li>
+                    <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--folder--close">Item 3</a>
+                    <ul class="vertical-menu--close">
+                        <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 4</li>
+                        <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 5</li>
+                        <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 6</li>
+                        <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 7</li>
+                        <li class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--document"> Thing 8</li>
+                    </ul>
+                </li>
+                <li>
+                    <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--0 vertical-menu__item--folder--close">Item 4</a>
+                    <ul class=" vertical-menu--close">
+                        <li>
+                            <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 4</a>
+                            <ul class="vertical-menu--close">
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 6</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a onclick=abrirCerrar(this) class="vertical-menu__item vertical-menu__item--1 vertical-menu__item--folder--close">Sub-item 5</a>
+                            <ul class="vertical-menu--close">
+                                <li class="vertical-menu__item vertical-menu__item--2 vertical-menu__item--document"> Page 7</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        <main class="col-10">
+            <div class="row">
+                <div class="col-4 border">
+                    hola<br>
+                    hola<br>
+                </div>
+                <div class="col-4 border">
+                    hola<br>
+                    hola<br>
+                </div>
+                <div class="col-4 border">
+                    hola<br>
+                    hola<br>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

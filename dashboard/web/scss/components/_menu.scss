@@ -1,3 +1,22 @@
+@mixin vertical-menu__item-format($level,$color) {
+    background-color: $color;
+    &:before{
+       padding-left: 10px;
+       padding-right: 10*($level+1)*1px; 
+    }
+}
+@mixin vertical-menu__item--folder($contentBefore,$contentAfter){
+    &:before{
+        font-family: FontAwesome;
+        content:$contentBefore; 
+    }
+     &:after{
+        font-family: FontAwesome;
+        content:$contentAfter;
+        float:right;
+        padding: 0 10px; 
+    }
+}
 .vertical-menu--close{
     display:none;
 }
@@ -7,46 +26,16 @@
     display:block;
     color: #ffffff;
 }
-.vertical-menu__item--1{
-    background-color: #35383D;
+@each $level,$color in $menuLevels{
+    .vertical-menu__item--#{$level}{
+        @include vertical-menu__item-format($level,$color);
+    }
 }
-.vertical-menu__item--2{
-    background-color: #27282B;
+.vertical-menu__item--folder--open{
+    @include vertical-menu__item--folder("\f07c","\f0d8")
 }
-.vertical-menu__item--0{
-    background-color: #4D5158;
-}
-.vertical-menu__item--0:before{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.vertical-menu__item--1:before{
-    padding-left: 20px;
-    padding-right: 10px;
-}
-.vertical-menu__item--2:before{
-    padding-left: 30px;
-    padding-right: 10px;
-}
-.vertical-menu__item--folder--open:before{
-    font-family: FontAwesome;
-    content:"\f07c";
- }
-.vertical-menu__item--folder--open:after{
-    font-family: FontAwesome;
-    content:"\f0d8";
-    float:right;
-    padding: 0 10px; 
-}
-.vertical-menu__item--folder--close:before{
-    font-family: FontAwesome;
-    content:"\f07b";
-}
-.vertical-menu__item--folder--close:after{
-    font-family: FontAwesome;
-    content:"\f0d7";
-    float:right;
-    padding: 0 10px;
+.vertical-menu__item--folder--close{
+    @include vertical-menu__item--folder("\f07b","\f0d7") 
 }
 .vertical-menu__item--document:before{
     font-family: FontAwesome;

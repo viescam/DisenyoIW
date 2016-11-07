@@ -1,7 +1,7 @@
 .panel{
     box-shadow: 5px 5px 10px #dddddd;
     border-radius: 5px;
-    margin:20px 0;
+    margin:5px;
 }
 @each $functionality-name, $color in $functionalities{
     .panel--#{$functionality-name}{

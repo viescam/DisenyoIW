@@ -1,12 +1,17 @@
+@mixin panel__body--generic($color) {
+    padding:15px 15px;
+    margin:0;
+    background-color: #ffffff;
+    color: #000000;
+    border-right:1px solid $color;
+    border-left:1px solid $color;
+    border-bottom:1px solid $color;    
+}
+
 .panel{
     box-shadow: 5px 5px 10px #dddddd;
     border-radius: 5px;
     margin:5px;
-}
-@each $functionality-name, $color in $functionalities{
-    .panel--#{$functionality-name}{
-        box-shadow: 5px 5px 10px desaturate(lighten($color,30%),15%);
-   }
 }
 .panel__header{
     background-color: #dddddd;
@@ -15,30 +20,30 @@
     border:1px solid #b3acac;
     border-radius: 5px 5px 0 0;
 }
+.panel__body{
+    @include panel__body--generic($defectColorPanelBody);
+    border-radius: 0 0 5px 5px;
+}
+.panel__body-intermedio{
+    @include panel__body--generic($defectColorPanelBody);
+}
 @each $functionality-name, $color in $functionalities{
+    .panel--#{$functionality-name}{
+        box-shadow: 5px 5px 10px desaturate(lighten($color,30%),15%);
+    }    
     .panel__header--#{$functionality-name}{
         background-color: desaturate(lighten($color,30%),15%);
         color: #ffffff;
         border:1px solid lighten($color,20%); 
-   }
-}
-.panel__body{
-    padding:15px 15px;
-    margin:0;
-    background-color: #ffffff;
-    color: #000000;
-    border-right:1px solid #b3acac;
-    border-left:1px solid #b3acac;
-    border-bottom:1px solid #b3acac;
-    border-radius: 0 0 5px 5px;
-}
-@each $functionality-name, $color in $functionalities{
+    }    
     .panel__body--#{$functionality-name}{
-        border-right:1px solid lighten($color,20%);
-        border-left:1px solid lighten($color,20%);
-        border-bottom:1px solid lighten($color,20%);
+        @include panel__body--generic(lighten($color,20%));
+    }    
+    .panel__body-intermedio--#{$functionality-name}{
+        @include panel__body--generic(lighten($color,20%));
     }
 }
+
 @each $textAlign-name, $color in $textAligns{
     .panel--#{$textAlign-name}{
         text-align: $textAlign-name;

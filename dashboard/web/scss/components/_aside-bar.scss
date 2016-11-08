@@ -1,3 +1,15 @@
+.vertical-menu__icon{
+   padding:10px;
+   content:"";
+   background-color: $menuLevel1Color;
+}
+.vertical-menu__icon:after{
+   font-family: FontAwesome;
+   content:"\f0c9";
+   color:#ffffff;
+   //font-size:50px;
+}
+
 @mixin vertical-menu__item--format($level,$color) {
     background-color: $color;
     &:before{

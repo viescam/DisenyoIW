@@ -33,3 +33,9 @@
     }
 }
 
+@each $textAlign-name, $color in $textAligns{
+    .boton--#{$textAlign-name}{
+        text-align: $textAlign-name;
+    }
+}
+

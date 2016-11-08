@@ -39,6 +39,12 @@
         border-bottom:1px solid lighten($color,20%);
     }
 }
+@each $textAlign-name, $color in $textAligns{
+    .panel--#{$textAlign-name}{
+        text-align: $textAlign-name;
+    }
+}
+
 
 
 

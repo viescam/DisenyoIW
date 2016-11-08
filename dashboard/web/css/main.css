@@ -334,6 +334,15 @@ template {
   padding: 14px;
   border-radius: 9px; }
 
+.boton--left {
+  text-align: left; }
+
+.boton--center {
+  text-align: center; }
+
+.boton--right {
+  text-align: right; }
+
 .vertical-menu--close {
   display: none; }
 
@@ -385,6 +394,14 @@ template {
   font-family: FontAwesome;
   content: "\f016"; }
 
+.aside-bar {
+  display: block;
+  height: 100vh;
+  background-color: #4D5158; }
+
+html {
+  height: 100%; }
+
 .message {
   background-color: #dddddd;
   color: #5d5a5a;
@@ -418,6 +435,15 @@ template {
   background-color: #f0d2d1;
   border: 1px solid #eba5a3;
   box-shadow: 2px 2px 5px #f3cfce; }
+
+.message--left {
+  text-align: left; }
+
+.message--center {
+  text-align: center; }
+
+.message--right {
+  text-align: right; }
 
 .panel {
   box-shadow: 5px 5px 10px #dddddd;
@@ -505,6 +531,15 @@ template {
   border-right: 1px solid #eba5a3;
   border-left: 1px solid #eba5a3;
   border-bottom: 1px solid #eba5a3; }
+
+.panel--left {
+  text-align: left; }
+
+.panel--center {
+  text-align: center; }
+
+.panel--right {
+  text-align: right; }
 
 .col-1 {
   width: 8.33333%;

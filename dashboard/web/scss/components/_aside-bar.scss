@@ -1,4 +1,4 @@
-@mixin vertical-menu__item-format($level,$color) {
+@mixin vertical-menu__item--format($level,$color) {
     background-color: $color;
     &:before{
        padding-left: 10px;
@@ -28,7 +28,7 @@
 }
 @each $level,$color in $menuLevels{
     .vertical-menu__item--#{$level}{
-        @include vertical-menu__item-format($level,$color);
+        @include vertical-menu__item--format($level,$color);
     }
 }
 .vertical-menu__item--folder--open{
@@ -40,6 +40,14 @@
 .vertical-menu__item--document:before{
     font-family: FontAwesome;
     content:"\f016";
+}
+.aside-bar{
+    display:block;
+    height: 100vh;
+    background-color: $menuLevel0Color;
+}
+html{
+    height: 100%;
 }
 
 

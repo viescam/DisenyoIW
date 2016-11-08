@@ -15,3 +15,8 @@
         box-shadow: 2px 2px 5px desaturate(lighten($color,30%),5%);
     }
 }
+@each $textAlign-name, $color in $textAligns{
+    .message--#{$textAlign-name}{
+        text-align: $textAlign-name;
+    }
+}

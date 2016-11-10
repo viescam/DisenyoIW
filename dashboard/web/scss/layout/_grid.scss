@@ -24,3 +24,17 @@ $num_columns:12;
     clear:both;
     display: block;
 }
+@each $typeScreen,$widthScreen in $tamanyosScreen{
+    @media (min-width: $widthScreen){
+        @for $i from 1 through $num_columns{
+            .col-#{$typeScreen}-#{$i}{
+                width: ((100/$num_columns)*$i)*1%;
+                float:left;
+            }
+
+            .offset-#{$typeScreen}-#{$i}{
+                margin-left:((100/$num_columns)*$i)*1%;
+            }
+        }
+    }
+} 

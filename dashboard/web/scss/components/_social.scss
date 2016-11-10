@@ -1,0 +1,20 @@
+@mixin social-network_box--generic($color){
+    background-color: lighten($color,20%);
+    text-align: center;
+    margin:5px;
+    padding:3px 15px;
+    border:1px solid darken($color,10%);
+    border-radius: 3px;
+    display: block;
+    
+}
+@each $social-network,$color in $social-colors{
+    .social-network_box--#{$social-network}{
+        @include social-network_box--generic($color);
+    }
+}
+.social-network_icon{
+    width:50%;
+    height:auto;
+}
+

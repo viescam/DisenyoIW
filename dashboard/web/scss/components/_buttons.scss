@@ -25,8 +25,8 @@
     }
 }
 
-@for $i from 1 through length($tamanyos){
-    .boton--#{nth($tamanyos,$i)}{
+@for $i from 1 through length($tamanyosComponents){
+    .boton--#{nth($tamanyosComponents,$i)}{
         font-size:10px+$i*2px;
         padding:4px+$i*2px;
         border-radius:4px+$i*1px;

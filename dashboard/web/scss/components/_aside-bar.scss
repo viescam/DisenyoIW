@@ -64,5 +64,21 @@
 html{
     height: 100%;
 }
+.vertical-hamburguesa{
+   color:#ffffff;
+   padding:10px;
+   content:"";
+   background-color: $menuLevel1Color;    
+}
+
+/*.hamburguesa-xs{
+    color:#ffffff;
+    float:none;
+    display:inline-block;
+    position:relative;
+    left:0px;
+    top:0px;
+}*/
+
 
 

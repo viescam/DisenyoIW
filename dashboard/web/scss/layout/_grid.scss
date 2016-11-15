@@ -30,11 +30,16 @@ $num_columns:12;
             .col-#{$typeScreen}-#{$i}{
                 width: ((100/$num_columns)*$i)*1%;
                 float:left;
+                display:block;
             }
 
             .offset-#{$typeScreen}-#{$i}{
                 margin-left:((100/$num_columns)*$i)*1%;
             }
         }
+        .col-#{$typeScreen}-hidden{
+            display:none;
+        }
     }
-} 
+}
+

@@ -17,4 +17,12 @@
     width:50%;
     height:auto;
 }
+@each $typeScreen,$widthScreen,$widhtIcon in $socialTamanyos{
+    @media (min-width: $widthScreen){
+        .social-#{$typeScreen}{
+            width:$widhtIcon;
+            height:auto;
+        }
+    }
+}
 

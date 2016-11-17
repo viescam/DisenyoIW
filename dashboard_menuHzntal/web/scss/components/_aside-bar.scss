@@ -1,0 +1,84 @@
+.vertical-menu{
+    content:"";
+}
+.vertical-menu__icon{
+   padding:10px;
+   content:"";
+   background-color: $menuLevel1Color;
+}
+.vertical-menu__icon:after{
+   font-family: FontAwesome;
+   content:"\f0c9";
+   color:#ffffff;
+   //font-size:50px;
+}
+
+@mixin vertical-menu__item--format($level,$color) {
+    background-color: $color;
+    &:before{
+       padding-left: 10px;
+       padding-right: 10*($level+1)*1px; 
+    }
+}
+@mixin vertical-menu__item--folder($contentBefore,$contentAfter){
+    &:before{
+        font-family: FontAwesome;
+        content:$contentBefore; 
+    }
+     &:after{
+        font-family: FontAwesome;
+        content:$contentAfter;
+        float:right;
+        padding: 0 10px; 
+    }
+}
+.vertical-menu--close{
+    display:none;
+}
+.vertical-menu__item{
+    border-bottom: 1px solid #41444a;
+    padding:10px 0;  
+    display:block;
+    color: #ffffff;
+}
+@each $level,$color in $menuLevels{
+    .vertical-menu__item--#{$level}{
+        @include vertical-menu__item--format($level,$color);
+    }
+}
+.vertical-menu__item--folder--open{
+    @include vertical-menu__item--folder("\f07c","\f0d8")
+}
+.vertical-menu__item--folder--close{
+    @include vertical-menu__item--folder("\f07b","\f0d7") 
+}
+.vertical-menu__item--document:before{
+    font-family: FontAwesome;
+    content:"\f016";
+}
+.aside-bar{
+    display:block;
+    height: 100vh;
+    background-color: $menuLevel0Color;
+}
+html{
+    height: 100%;
+}
+.vertical-hamburguesa{
+   color:#ffffff;
+   padding:10px;
+   content:"";
+   background-color: $menuLevel1Color;    
+}
+
+/*.hamburguesa-xs{
+    color:#ffffff;
+    float:none;
+    display:inline-block;
+    position:relative;
+    left:0px;
+    top:0px;
+}*/
+
+
+

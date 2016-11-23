@@ -1,0 +1,29 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin message-generic($color){
+    background-color: lighten($color,30%);
+    border: 1px solid $color;
+    color: #000;
+    padding: 10px 15px;
+    margin:5px;
+    @include border-radius(5px);
+    box-shadow: 2px 2px 5px lighten($color,30%);
+}
+
+.message{
+    @include message-generic(#bebebe);
+}
+
+@each $functionality_name,$color in $functionalities{
+    .message--#{$functionality_name}{
+        @include message-generic($color);
+    }
+    
+}
+
+

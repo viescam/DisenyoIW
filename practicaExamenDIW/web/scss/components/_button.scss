@@ -1,0 +1,36 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin button-generic($color){
+    background-color: $color;
+    color:#ffffff;
+    border: 1px solid darken($color,10%);
+    padding:10px 10px;
+    margin:5px;
+    @include border-radius(5px);
+    box-shadow: 2px 2px 5px lighten($color,20%);
+    display:inline-block;
+    text-decoration: none;
+    font-size:16px;
+}
+
+.button{
+    @include button-generic(#bebebe);
+}
+@each $functionality_name,$color in $functionalities{
+    .button--#{$functionality_name}{
+        @include button-generic($color);
+    }
+}
+
+@for $i from 1 through length($tamanyosButton){
+    .button--#{nth($tamanyosButton,$i)}{
+        padding: 4px + $i*2px;
+        font-size: 10px + $i*2px;
+        @include border-radius(3px + $i*1px);
+    }
+}

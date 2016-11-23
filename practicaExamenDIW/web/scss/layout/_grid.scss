@@ -1,0 +1,32 @@
+$num_columns:12;
+@for $i from 1 through $num_columns{
+    .col--#{$i}{
+        width:((100/$num_columns)*$i)*1%;
+        float:left;
+    }
+    .offset--#{$i}{
+        margin-left: ((100/$num_columns)*$i)*1%;
+    }
+}
+
+.row:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+@each $tamanyoScreen,$widthScreen in $tamanyosScreen{
+    @media (min-width:$widthScreen){
+        @for $i from 1 through $num_columns{
+            .col-#{$tamanyoScreen}-#{$i}{
+                width:((100/$num_columns)*$i)*1%;
+                float:left;
+                display:block;
+            }
+            .offset-#{$tamanyoScreen}-#{$i}{
+                margin-left: ((100/$num_columns)*$i)*1%;
+            }
+        }
+    }
+}
+

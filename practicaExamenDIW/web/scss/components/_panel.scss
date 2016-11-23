@@ -1,0 +1,53 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin panel-generic($color){
+    //border: 1px solid darken($color,10%);
+    //@include border-radius(5px);
+    box-shadow: 5px 5px 10px lighten($color,20%);
+    margin:5px;
+    //border-radius: 5px;
+}
+@mixin panel__header-generic($color){
+    background-color: lighten($color,20%);
+    color:#ffffff;
+    padding: 10px 15px;
+    border: 1px solid darken($color,10%);
+    @include border-radius(5px 5px 0 0);
+}
+@mixin panel__body-generic($color){
+    background-color:#ffffff;
+    color:#000000;
+    padding: 15px 15px;
+    border-bottom: 1px solid darken($color,10%);
+    border-left: 1px solid darken($color,10%);
+    border-right: 1px solid darken($color,10%);
+    @include border-radius(0 0 5px 5px);
+}
+
+.panel{
+    @include panel-generic(#bebebe);
+}
+.panel__header{
+    @include panel__header-generic(#bebebe);
+}
+.panel__body{
+    @include panel__body-generic(#bebebe);
+}
+
+@each $functionality_name,$color in $functionalities{
+    .panel--#{$functionality_name}{
+        @include panel-generic($color);
+    }
+    .panel__header--#{$functionality_name}{
+        @include panel__header-generic($color);
+    }
+.panel__body--#{$functionality_name}{
+        @include panel__body-generic($color);
+    }
+    
+}
+

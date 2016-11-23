@@ -1,0 +1,82 @@
+$background-color: #F8F8F8;
+$border-color: #E7E7E7;
+$color: #777;
+$padding: 12px;
+
+.navbar{
+    padding:$padding;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    width:100%;
+    display: block;
+    float:left;
+}
+.responsive-navbar{
+    padding:15px;
+    /*background-color: $background-color;
+    border: 1px solid $border-color;*/ 
+}
+.responsive-navbar__button{
+    float:right;
+    background-color: $background-color;
+    //color: $color;
+    border: 1px solid $border-color;
+    font-size:100%;
+    padding: $padding/1.5;
+    border-radius: 5px;
+}
+.responsive-navbar__title{
+    color: $color;
+    font-size:200%;
+    text-decoration: none;
+}
+.responsive-navbar__menus{
+    //background-color: $background-color;
+    border: 1px solid $border-color;
+    //padding:$padding;
+}
+.responsive-navbar__menu{
+   padding: $padding;
+   border: 1px solid $color;
+   list-style: none; 
+}
+.navbar-responsive__item{
+    //display: inline-block;
+    text-decoration: none;
+    padding: $padding/1.5;
+    line-height: 20px;
+}
+.responsive-navbar__link{
+    text-decoration: none;
+    color: $color;
+    //padding:$padding;
+    display:block;
+}
+
+@media(min-width: 750px ){
+    .responsive-navbar__menus--right{
+        display:inline-block;
+        float:right;
+    }
+    .responsive-navbar__menus--left{
+        display:inline-block;  
+    }
+    .responsive-navbar__menu--right{
+        float:right;
+    }
+    .responsive-navbar__menu--left{
+        float: left;
+    }
+    .responsive-navbar__item--right{
+        float:right;  
+    }
+    .responsive-navbar__item--left{
+        float:left;
+    }
+    .responsive-navbar{
+        display:inline-block;
+    }   
+    .responsive-navbar__button{
+        display: none;
+    }
+}

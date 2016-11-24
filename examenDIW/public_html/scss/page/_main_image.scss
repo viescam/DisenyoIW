@@ -1,0 +1,23 @@
+$marginAlBorde:80px;
+.main_image{
+    background-image: url("http://2.bp.blogspot.com/-cFVxsHASQNI/TrxJlBgWJnI/AAAAAAAAAVE/Kk9n6bcENyc/s1600/fondo+azul.jpg");
+    /*width:100%;
+    height: auto;*/
+    color:#fff;
+    font-size:30px;
+    margin-bottom: 40px;
+}
+@mixin main_image__texto{
+    text-align: right;
+    padding:20px;
+    font-size:40px;
+}
+.main_image__saludo{
+    @include main_image__texto;
+    margin-top:$marginAlBorde;
+    font-weight: bold;    
+}
+.main_image__bienvenida{
+    @include main_image__texto;
+    margin-bottom:$marginAlBorde;
+}

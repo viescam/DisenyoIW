@@ -1,0 +1,40 @@
+.footer{
+    margin-top: 40px;
+    background-color: #4A4A4A;
+    
+    font-size: 12px;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.footer_block{
+    list-style: none;
+    text-align: left;
+    list-style: none;
+}
+.footer_block__item{
+    padding:10px;
+    font-size:12px;
+    color:#fff;
+}
+.footer_block--info{
+    border-right: 1px solid #000
+}
+.footer_block__item--copyright{
+    &:first-child{
+        font-weight: bold;
+    }
+}
+.footer_block__item--info{    
+    &:first-child{
+        font-size:14px;
+        &:before{
+        font-family: FontAwesome;
+        content:"\f07c";
+        padding-right: 10px;
+        }
+    }
+}
+.footer_block__item--info--horario{
+    font-size: 10px
+}
+

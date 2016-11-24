@@ -1,0 +1,30 @@
+@mixin boton-generic($background-color,$color){
+   background-color: $background-color;
+   color:$color;
+   border-radius: 15px;
+   padding: 15px 10px;
+   display: inline-block;
+   text-decoration: none;
+   font-size:14px;
+   //margin:5px;
+}
+.boton-importante{
+    @include boton-generic($pageColor,#ffffff);
+    &:before{
+        font-family: FontAwesome;
+        content:"\f07c"; 
+        padding-right:20px;
+    }
+    &:after{
+        font-family: FontAwesome;
+        content:"\f0d7";
+        //float:right;
+        padding-left:20px;
+    }
+}
+.boton{
+    @include boton-generic(#ffffff,$pageColor);
+    border: 1px solid $pageColor;
+    float:right;
+    
+}

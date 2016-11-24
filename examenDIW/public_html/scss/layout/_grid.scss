@@ -1,0 +1,25 @@
+$num_columns:12;
+@each $tamanyoScreen,$widthScreen in $tamanyosScreen{
+    @media (min-width:$widthScreen){
+        @for $i from 1 through $num_columns{
+            .col-#{$tamanyoScreen}-#{$i}{
+                width: ((100/$num_columns)*$i)*1%;
+                float:left;
+                display:block;
+            }
+            .offset-#{$tamanyoScreen}-#{$i}{
+                margin-left:((100/$num_columns)*$i)*1%;
+            }
+        }
+        .col-#{$tamanyoScreen}-hidden{
+            display:none;
+        }
+    }
+}
+
+.row:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+

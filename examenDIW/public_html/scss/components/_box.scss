@@ -1,0 +1,38 @@
+$background-color-box:#fff;
+$color:gray;
+.box-help{
+    background-color:$background-color-box;
+    padding:8px;
+    display:block;
+    width:100%; 
+    float:left;
+    margin:5px 0;
+    text-align: center;
+}
+.box-help__item{
+   background-color: $background-color-box;
+   color:$color;
+   border-radius: 15px;
+   padding: 10px;
+   display: inline-block;
+   text-decoration: none;
+}
+
+@mixin box-help__item__icon($icon){
+    &:after{
+        font-family: FontAwesome;
+        content:$icon;
+        padding: 0 10px;
+    }
+}
+
+.box-help__item--search{
+    margin-right:5px;
+    @include box-help__item__icon("\f07c");
+        
+}
+.box-help__item--language{
+    @include box-help__item__icon("\f0d7");
+}
+
+
